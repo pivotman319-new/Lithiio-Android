@@ -7,15 +7,30 @@ body
 	font-family: 'Open Sans', sans-serif;
 	background-image: url('background.png');
 	background-repeat: repeat;
+    margin: 0px;
 }
-
+input {
+    background-color: hsla(0, 0%, 100%, 0.2); /* we gotta use hsla instead of hex because idk */
+    border: 0px solid;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    color: white;
+}
 #onlu {
 	visibility: hidden;
 }
 
-a:hover, a:visited, a:link, a:active
-{
+a {
     text-decoration: none;
+    color: lightblue;
+}
+
+.info
+{
+    background-color: hsla(0, 0%, 100%, 0.2);
+    height: 30px;
+    padding-top: 10px;
+    font-size: 16px;
 }
 
 .btn {
@@ -270,6 +285,30 @@ fieldset[disabled] .btn-warning.active {
 .btn-warning .badge {
   color: #f0ad4e;
   background-color: #fff;
+}
+#uploadb {
+	background: url(upload.png);
+	background-color: transparent;
+	background-position: 10% 50%;
+    background-repeat: no-repeat;
+    border: 0px solid;
+    box-shadow: 0 0 10px white;
+    height: 61px;
+    width: 200px;
+    font-size: 19px;
+    padding-left: 60px;
+}
+#logoutb {
+	color: #fff;
+    background-color: transparent;
+    border: 0px solid;
+	width: calc(100% - 10px);
+    box-shadow: 0 0 10px red;
+    max-width: 325px;
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .btn-danger {
   color: #fff;

@@ -160,6 +160,7 @@ task cdvPrintProps << {
 android {
 
     defaultConfig {
+        resConfigs "en"
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId privateHelpers.extractStringFromManifest("package")
 

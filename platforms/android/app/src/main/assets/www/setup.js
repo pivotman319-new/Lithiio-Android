@@ -1,7 +1,6 @@
 if (localStorage.getItem("apikey")) {
 	window.location.href = "index.html";
 }
-cordova.plugins.firebase.analytics.setCurrentScreen("Login Page");
 var data = new FormData();
 		var xhr = new XMLHttpRequest();
 		xhr.addEventListener("readystatechange", function () {
