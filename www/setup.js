@@ -10,14 +10,14 @@ var data = new FormData();
 		localStorage.setItem("apikey", r.apikey);
 		window.location.href = "index.html";
 	} else {
-		document.getElementsByName("error")[0].innerHTML = r.error;
+		document.getElementById("error").innerHTML = r.error;
 	}
   }
 });
 
 function login() {
-	var email = document.getElementsByName('email')[0].value;
-	var pswrd = document.getElementsByName('pswrd')[0].value;
+	var email = document.getElementById('email').value;
+	var pswrd = document.getElementById("pswrd").value;
 	data.append("email", email);
 	data.append("password", pswrd);
 	xhr.open("POST", "https://lithi.io/api/v1/fetch-api-key.php");
