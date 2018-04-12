@@ -290,9 +290,9 @@ fieldset[disabled] .btn-warning.active {
 	background: url(upload.png);
 	background-color: transparent;
 	background-position: 10% 50%;
+  background-size: 42px;
     background-repeat: no-repeat;
-    border: 0px solid;
-    box-shadow: 0 0 10px white;
+    border: 0.5px grey solid;
     height: 61px;
     width: 200px;
     font-size: 19px;
@@ -302,13 +302,17 @@ fieldset[disabled] .btn-warning.active {
 	color: #fff;
     background-color: transparent;
     border: 0px solid;
-	width: calc(100% - 10px);
-    box-shadow: 0 0 10px red;
+    width: calc(100% - 10px);
     max-width: 325px;
+    border: 0.5px red solid;
     position: fixed;
-    bottom: 5px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
+}
+#historyb {
+  position: fixed;
+  bottom: 45px;
 }
 .btn-danger {
   color: #fff;

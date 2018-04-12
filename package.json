@@ -2,7 +2,7 @@
     "name": "com.milkgames.lithiio",
     "displayName": "Lithi.io",
     "version": "1.0.6",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "description": "A mobile application for the Lithi.io file sharing service.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
