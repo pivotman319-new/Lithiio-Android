@@ -16,10 +16,10 @@ var data = new FormData();
 });
 
 function login() {
-	var email = document.getElementById('email').value;
-	var pswrd = document.getElementById("pswrd").value;
+	var email = document.getElementById("email").value;
+	var password = document.getElementById("password").value;
 	data.append("email", email);
-	data.append("password", pswrd);
+	data.append("password", password);
 	xhr.open("POST", "https://lithi.io/api/v1/fetch-api-key.php");
 	xhr.send(data);
 };
