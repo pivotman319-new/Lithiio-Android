@@ -1,5 +1,5 @@
 if (localStorage.getItem("apikey")) {
-	window.location.href = "index.html";
+	window.location.replace("index.html");
 }
 var data = new FormData();
 		var xhr = new XMLHttpRequest();
@@ -8,7 +8,7 @@ var data = new FormData();
     var r = JSON.parse(this.responseText);
 	if (r.apikey) {
 		localStorage.setItem("apikey", r.apikey);
-		window.location.href = "index.html";
+		window.location.replace("index.html");
 	} else {
 		document.getElementById("error").innerHTML = r.error;
 	}

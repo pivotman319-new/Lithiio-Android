@@ -3,7 +3,7 @@ var isIntent = false;
 
 function onDeviceReady() {
     if (!localStorage.getItem("apikey")) {
-        window.location.href = "setup.html";
+        window.location.replace("setup.html");
     };
     if (!localStorage.getItem("history")) {
         localStorage.setItem("history", '[]')
@@ -106,6 +106,6 @@ function logout() {
     if (confirm("Are you SURE you want to logout? This will clear your upload history!")) {
         localStorage.removeItem("apikey");
         localStorage.removeItem("history");
-        window.location.href = "setup.html";
+        window.location.replace("setup.html");
     }
 }
