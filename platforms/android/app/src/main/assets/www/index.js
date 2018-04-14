@@ -37,9 +37,7 @@ function renderHistory() {
 renderHistory();
 
 function uploadf(URI) {
-    cordova.plugins.firebase.analytics.logEvent("upload", {
-        intent: window.isIntent
-    });
+    cordova.plugins.firebase.analytics.logEvent("upload", {intent: window.isIntent});
     window.FilePath.resolveNativePath(URI, function(result) {
         window.resolveLocalFileSystemURL(result, function(rURI) {
             var options = new FileUploadOptions();
