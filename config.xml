@@ -26,7 +26,6 @@
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
-    <plugin name="cordova-plugin-filepath" spec="^1.2.0" />
     <plugin name="cordova-plugin-clipboard2" spec="^0.1.0" />
     <plugin name="com.napolitano.cordova.plugin.intent" spec="https://github.com/MilkGames/cordova-plugin-intent" />
     <plugin name="cordova-plugin-firebase-analytics" spec="^0.13.0">
@@ -34,4 +33,5 @@
     </plugin>
     <plugin name="cordova-support-google-services" spec="^1.1.0" />
     <engine name="android" spec="^7.0.0" />
+    <plugin name="cordova-plugin-filepath" spec="^1.3.0" />
 </widget>

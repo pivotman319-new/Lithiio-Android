@@ -261,9 +261,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    compile "com.google.firebase:firebase-core:11.6.+"
     compile "com.android.support:support-v4:25.+"
     compile "com.android.support:appcompat-v7:25.+"
-    compile "com.google.firebase:firebase-core:11.6.+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

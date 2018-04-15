@@ -1,8 +1,8 @@
 {
   "_from": "cordova-plugin-filepath",
-  "_id": "cordova-plugin-filepath@1.2.0",
+  "_id": "cordova-plugin-filepath@1.3.0",
   "_inBundle": false,
-  "_integrity": "sha512-8sZ4z+cMUPRGsr2HPUAK4/FVXGUeMEMbFcyoPZTf2Q/TNlhBJxD5E6gdwSDiBlFVqjcpW3IAZtoNdTe9XgOf4A==",
+  "_integrity": "sha512-Dwd76FcVciSssAZ/FPfwfOlfHrmx7CAjYTNzCxeJ4NsMkCfTysCR3vHdX/03XExGi+74DImUB17uXsnyyOYnAQ==",
   "_location": "/cordova-plugin-filepath",
   "_phantomChildren": {},
   "_requested": {
@@ -19,8 +19,8 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-filepath/-/cordova-plugin-filepath-1.2.0.tgz",
-  "_shasum": "63cc36c7610404ab8451cd57f4dc92303a027a48",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-filepath/-/cordova-plugin-filepath-1.3.0.tgz",
+  "_shasum": "2d47ad4d8fcdbfe6e00e04d6ea6219a91eeb22e1",
   "_spec": "cordova-plugin-filepath",
   "_where": "C:\\Users\\Dell XPS\\Documents\\Cordova\\lithiio",
   "author": {
@@ -52,5 +52,5 @@
     "type": "git",
     "url": "git+https://github.com/hiddentao/cordova-plugin-filepath.git"
   },
-  "version": "1.2.0"
+  "version": "1.3.0"
 }

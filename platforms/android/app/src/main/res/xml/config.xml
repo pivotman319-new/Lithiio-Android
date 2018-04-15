@@ -12,10 +12,6 @@
     <feature name="FileTransfer">
         <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
     </feature>
-    <feature name="FilePath">
-        <param name="android-package" value="com.hiddentao.cordova.filepath.FilePath" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="Clipboard">
         <param name="android-package" value="com.verso.cordova.clipboard.Clipboard" />
     </feature>
@@ -50,4 +46,8 @@
     <preference name="loglevel" value="DEBUG" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="AndroidLaunchMode" value="singleTask" />
+    <feature name="FilePath">
+        <param name="android-package" value="com.hiddentao.cordova.filepath.FilePath" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

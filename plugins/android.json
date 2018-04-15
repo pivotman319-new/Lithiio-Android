@@ -16,9 +16,6 @@
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
-    "cordova-plugin-filepath": {
-      "PACKAGE_NAME": "com.milkgames.lithiio"
-    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
@@ -33,6 +30,9 @@
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
     "cordova-support-google-services": {
+      "PACKAGE_NAME": "com.milkgames.lithiio"
+    },
+    "cordova-plugin-filepath": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     }
   },

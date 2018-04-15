@@ -198,14 +198,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-filepath.FilePath",
-    "file": "plugins/cordova-plugin-filepath/www/FilePath.js",
-    "pluginId": "cordova-plugin-filepath",
-    "clobbers": [
-      "window.FilePath"
-    ]
-  },
-  {
     "id": "cordova-plugin-clipboard2.Clipboard",
     "file": "plugins/cordova-plugin-clipboard2/www/clipboard.js",
     "pluginId": "cordova-plugin-clipboard2",
@@ -228,6 +220,14 @@ module.exports = [
     "merges": [
       "cordova.plugins.firebase.analytics"
     ]
+  },
+  {
+    "id": "cordova-plugin-filepath.FilePath",
+    "file": "plugins/cordova-plugin-filepath/www/FilePath.js",
+    "pluginId": "cordova-plugin-filepath",
+    "clobbers": [
+      "window.FilePath"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -237,11 +237,11 @@ module.exports.metadata =
   "cordova-plugin-filechooser": "1.0.1",
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-file-transfer": "1.7.1",
-  "cordova-plugin-filepath": "1.0.2",
   "cordova-plugin-clipboard2": "0.1.0",
   "com.napolitano.cordova.plugin.intent": "0.1.3",
   "cordova-support-google-services": "1.1.0",
-  "cordova-plugin-firebase-analytics": "0.13.0"
+  "cordova-plugin-firebase-analytics": "0.13.0",
+  "cordova-plugin-filepath": "1.0.2"
 };
 // BOTTOM OF METADATA
 });
