@@ -312,6 +312,14 @@ fieldset[disabled] .btn-warning.active {
     font-size: 19px;
     padding-left: 60px;
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 29px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
 #logoutb {
   background: #983836;
   color: white;
@@ -319,6 +327,13 @@ fieldset[disabled] .btn-warning.active {
   position: absolute;
   top: 5px;
   right: 3px;
+  border: 0px solid;
+}
+#camerab {
+  width: 70px;
+  position: absolute;
+  top: 5px;
+  left: 3px;
   border: 0px solid;
 }
 .btn-danger {

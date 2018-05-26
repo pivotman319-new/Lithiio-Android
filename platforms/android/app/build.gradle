@@ -264,6 +264,7 @@ dependencies {
     compile "com.google.firebase:firebase-core:11.6.+"
     compile "com.android.support:support-v4:25.+"
     compile "com.android.support:appcompat-v7:25.+"
+    compile "com.android.support:support-v4:24.1.1+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

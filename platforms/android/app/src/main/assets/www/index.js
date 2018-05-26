@@ -1,13 +1,18 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 var isIntent = false;
-
 function onDeviceReady() {
     if (!localStorage.getItem("apikey")) {
         window.location.replace("setup.html");
     };
     if (!localStorage.getItem("history")) {
-        localStorage.setItem("history", '[]')
+        localStorage.setItem("history", "[]");
     };
+    if (!localStorage.getItem("quality")) {
+        localStorage.setItem("quality", "50");
+	};
+	if (!localStorage.getItem("allowedit")) {
+        localStorage.setItem("allowedit", "false");
+	};
     var ft;
     window.isIntent = false;
     window.plugins.intent.setNewIntentHandler(function(Intent) {
@@ -17,6 +22,38 @@ function onDeviceReady() {
         }
     });
 };
+
+function takepicupload() {
+  var options = {
+    quality: localStorage.getItem("quality"),
+    destinationType: Camera.DestinationType.FILE_URI,
+    sourceType: Camera.PictureSourceType.CAMERA,
+    allowEdit: JSON.parse(localStorage.getItem("allowedit")),
+    encodingType: Camera.EncodingType.JPEG,
+    saveToPhotoAlbum: true,
+    correctOrientation: true
+  };
+  navigator.camera.getPicture(function cameraSuccess(data) {
+    uploadf(data);
+  }, function cameraError(error) {
+    console.log(error);
+  }, options);
+};
+
+if (!navigator.onLine) {
+	document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 100%, 50%, 0.2)";
+    document.getElementsByClassName("info")[0].innerHTML = "You are offline.";
+};
+
+window.addEventListener("offline", function(event){
+    document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 100%, 50%, 0.2)";
+    document.getElementsByClassName("info")[0].innerHTML = "You are offline.";
+});
+
+window.addEventListener("online", function(event){
+    document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 0%, 100%, 0.2)";
+    document.getElementsByClassName("info")[0].innerHTML = "L I T H I I O";
+});
 
 function renderHistory() {
     if (document.getElementById("table").rows.length > 0) {

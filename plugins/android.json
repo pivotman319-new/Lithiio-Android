@@ -10,9 +10,6 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
-    "cordova-plugin-filechooser": {
-      "PACKAGE_NAME": "com.milkgames.lithiio"
-    },
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
@@ -33,6 +30,12 @@
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
     "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.milkgames.lithiio"
+    },
+    "com.megster.cordova.FileChooser": {
+      "PACKAGE_NAME": "com.milkgames.lithiio"
+    },
+    "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     }
   },

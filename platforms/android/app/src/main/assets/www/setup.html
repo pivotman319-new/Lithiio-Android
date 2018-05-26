@@ -8,16 +8,17 @@
 		<script src="jquery-3.2.1.js"></script>
         <title>Lithi.io</title>
     </head>
-    <body>	
+    <body>
 	<h3>Login</h3>
 	<form action="javascript:login();">
-	<input required="true" type="email" placeholder="E-Mail" name="email" id="email" maxlength="64"><br>
-	<input required="true" type="password" placeholder="Password" name="password" id="password" maxlength="64"><br>
+	<input required type="email" placeholder="E-Mail" name="email" id="email" maxlength="64"><br>
+	<input required type="password" placeholder="Password" name="password" id="password" maxlength="64"><br>
 	<input type="hidden" name="authcode" placeholder="2FA Code">
 	<br>
 	<input type="submit" class="btn btn-success" id="loginb" value="Login"> <a href="https://lithi.io/create-account.php" class="btn btn-primary">Create Account</a>
 	</form> 
 	<p id="error"></p>
+	<p id="notice">By logging in, you agree to the <a href="https://lithi.io/terms-of-service.php">Terms of Service</a> and <a href="https://lithi.io/privacy-policy.php">Privacy Policy</a>.</p>
 		<script src="setup.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
     </body>

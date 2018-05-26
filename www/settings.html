@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <title>Lithi.io</title>
+   </head>
+   <body>
+      <script type="text/javascript" src="cordova.js"></script>
+      <h3>Settings</h3><br>
+      <table id="stable"><tr><td>Camera quality</td><td id="qualityv"></td></tr><tr><td>Allow edit (camera)</td><td><select id="editv" onchange="changeallowEdit()"><option value="true">Yes</option><option value="false">No</option></select></td></tr></table>
+      <script src="settings.js"></script>
+   </body>
+</html>

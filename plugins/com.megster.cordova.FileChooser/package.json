@@ -1,0 +1,56 @@
+{
+  "_from": "git+https://github.com/MilkGames/cordova-filechooser.git",
+  "_id": "cordova-filechooser@0.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-filechooser",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/MilkGames/cordova-filechooser.git",
+    "rawSpec": "https://github.com/MilkGames/cordova-filechooser.git",
+    "saveSpec": "git+https://github.com/MilkGames/cordova-filechooser.git",
+    "fetchSpec": "https://github.com/MilkGames/cordova-filechooser.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/MilkGames/cordova-filechooser.git#5b8c3de1ac1f63c84911aca082656bdd660f44eb",
+  "_spec": "https://github.com/MilkGames/cordova-filechooser.git",
+  "_where": "C:\\Users\\Dell XPS\\Documents\\Cordova\\lithiio",
+  "author": {
+    "name": "don"
+  },
+  "bugs": {
+    "url": "https://github.com/don/cordova-filechooser/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com.megster.cordova.FileChooser",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova FileChooser Plugin",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=2.8.0"
+    }
+  ],
+  "homepage": "https://github.com/don/cordova-filechooser#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "Apache License, Version 2.0",
+  "name": "cordova-filechooser",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/don/cordova-filechooser.git"
+  },
+  "version": "0.0.0"
+}
