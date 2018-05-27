@@ -303,15 +303,26 @@ fieldset[disabled] .btn-warning.active {
 #uploadb {
 	background: url(upload.png);
 	background-color: hsla(0, 0%, 60%, 0.18);
-	background-position: 10% 50%;
-  background-size: 42px;
+	background-position: center;
     background-repeat: no-repeat;
     border: 0.5px grey solid;
     height: 61px;
-    width: 200px;
+    width: 100px;
     font-size: 19px;
     padding-left: 60px;
 }
+#camerab {
+  background: url(camera.png);
+  background-color: hsla(0, 0%, 60%, 0.18);
+  background-position: center;
+    background-repeat: no-repeat;
+    border: 0.5px grey solid;
+    height: 61px;
+    width: 100px;
+    font-size: 19px;
+    padding-left: 60px;
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -329,7 +340,7 @@ fieldset[disabled] .btn-warning.active {
   right: 3px;
   border: 0px solid;
 }
-#camerab {
+#settingsb {
   width: 70px;
   position: absolute;
   top: 5px;

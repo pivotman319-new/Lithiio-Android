@@ -1,7 +1,7 @@
 {
     "name": "com.milkgames.lithiio",
     "displayName": "Lithi.io",
-    "version": "1.0.6",
+    "version": "1.0.91",
     "description": "A mobile application for the Lithi.io file sharing service.",
     "main": "index.js",
     "scripts": {

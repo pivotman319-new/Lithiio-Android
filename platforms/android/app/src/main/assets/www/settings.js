@@ -1,10 +1,10 @@
-document.getElementById("qualityv").innerHTML = "<div style='display: inline-block;' onclick='changeQuality()'>" + localStorage.getItem("quality") + "%</div>";
+document.getElementById("qualityi").value = localStorage.getItem("quality");
 document.getElementById("editv").value = localStorage.getItem("allowedit");
 function changeQuality() {
-	var qp = prompt("Enter a number between 1-100", localStorage.getItem("quality"));
-	if (!isNaN(qp) && qp >= 1 && qp <= 100) {
-		localStorage.setItem("quality", qp);
-		document.getElementById("qualityv").innerHTML = "<div style='display: inline-block;' onclick='changeQuality()'>" + localStorage.getItem("quality") + "%</div>";
+	if (document.getElementById('qualityi').validity.valid) {
+		localStorage.setItem("quality", document.getElementById('qualityi').value);
+	} else {
+		document.getElementById('qualityi').value = localStorage.getItem("quality");
 	}
 };
 function changeallowEdit() {

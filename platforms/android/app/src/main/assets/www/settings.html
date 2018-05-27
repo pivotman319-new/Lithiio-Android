@@ -10,7 +10,7 @@
    <body>
       <script type="text/javascript" src="cordova.js"></script>
       <h3>Settings</h3><br>
-      <table id="stable"><tr><td>Camera quality</td><td id="qualityv"></td></tr><tr><td>Allow edit (camera)</td><td><select id="editv" onchange="changeallowEdit()"><option value="true">Yes</option><option value="false">No</option></select></td></tr></table>
+      <table id="stable"><tr><td>Camera quality</td><td id="qualityv"><input type="number" min="1" max="100" onchange="changeQuality()" style="width: 26px; height: 11px;" id="qualityi"></td></tr><tr><td>Allow edit (camera)</td><td><select id="editv" onchange="changeallowEdit()"><option value="true">Yes</option><option value="false">No</option></select></td></tr></table>
       <script src="settings.js"></script>
    </body>
 </html>
