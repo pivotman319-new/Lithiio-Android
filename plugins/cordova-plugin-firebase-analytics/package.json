@@ -1,27 +1,24 @@
 {
-  "_from": "cordova-plugin-firebase-analytics",
-  "_id": "cordova-plugin-firebase-analytics@0.13.0",
+  "_from": "git+https://github.com/MilkGames/cordova-plugin-firebase-analytics.git",
+  "_id": "cordova-plugin-firebase-analytics@1.0.0",
   "_inBundle": false,
-  "_integrity": "sha1-mi55wTc1fM5srbdNHt8J6RnGEEk=",
+  "_integrity": "",
   "_location": "/cordova-plugin-firebase-analytics",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "cordova-plugin-firebase-analytics",
-    "name": "cordova-plugin-firebase-analytics",
-    "escapedName": "cordova-plugin-firebase-analytics",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "type": "git",
+    "raw": "https://github.com/MilkGames/cordova-plugin-firebase-analytics.git",
+    "rawSpec": "https://github.com/MilkGames/cordova-plugin-firebase-analytics.git",
+    "saveSpec": "git+https://github.com/MilkGames/cordova-plugin-firebase-analytics.git",
+    "fetchSpec": "https://github.com/MilkGames/cordova-plugin-firebase-analytics.git",
+    "gitCommittish": null
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-firebase-analytics/-/cordova-plugin-firebase-analytics-0.13.0.tgz",
-  "_shasum": "9a2e79c137357cce6cadb74d1edf09e919c61049",
-  "_spec": "cordova-plugin-firebase-analytics",
+  "_resolved": "git+https://github.com/MilkGames/cordova-plugin-firebase-analytics.git#09c7999acdddcb481020197c0d8e175c66b5e111",
+  "_spec": "https://github.com/MilkGames/cordova-plugin-firebase-analytics.git",
   "_where": "C:\\Users\\Dell XPS\\Documents\\Cordova\\lithiio",
   "author": {
     "name": "Maksim Chemerisuk",
@@ -60,5 +57,5 @@
     "postversion": "git push && git push --tags",
     "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml"
   },
-  "version": "0.13.0"
+  "version": "1.0.0"
 }

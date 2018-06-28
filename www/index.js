@@ -1,5 +1,5 @@
 document.addEventListener('deviceready', onDeviceReady, false);
-var isIntent = false;
+var clipboardmultiu = "";
 function onDeviceReady() {
     if (!localStorage.getItem("apikey")) {
         window.location.replace("setup.html");
@@ -13,12 +13,22 @@ function onDeviceReady() {
 	if (!localStorage.getItem("allowedit")) {
         localStorage.setItem("allowedit", "false");
 	};
+	if (!localStorage.getItem("enableAnalytics")) {
+        localStorage.setItem("enableAnalytics", "true");
+	};
     var ft;
-    window.isIntent = false;
     window.plugins.intent.setNewIntentHandler(function(Intent) {
         if (Intent.clipItems[0].uri) {
-            window.isIntent = true;
-            uploadf(Intent.clipItems[0].uri);
+        	if (Intent.clipItems.length > 1) {
+        	for (var i = 0; i < Intent.clipItems.length; i++) { 
+            	uploadf(Intent.clipItems[i].uri, true, false, true);
+			}
+			console.error("debug message: " + window.clipboardmultiu);
+			cordova.plugins.clipboard.copy(window.clipboardmultiu);
+			window.clipboardmultiu = "";
+        	} else {
+        		uploadf(Intent.clipItems[0].uri, true, false, false);
+        	}
         }
     });
 };
@@ -34,7 +44,7 @@ function takepicupload() {
     correctOrientation: true
   };
   navigator.camera.getPicture(function cameraSuccess(data) {
-    uploadf(data);
+    uploadf(data, false, true, false);
   }, function cameraError(error) {
     console.log(error);
   }, options);
@@ -73,8 +83,8 @@ function renderHistory() {
 
 renderHistory();
 
-function uploadf(URI) {
-    cordova.plugins.firebase.analytics.logEvent("upload", {intent: window.isIntent});
+function uploadf(URI, isIntent, isCamera, isMultiUpload) {
+    cordova.plugins.firebase.analytics.logEvent("upload", {intent: isIntent, camera: isCamera, multiupload: isMultiUpload});
     window.FilePath.resolveNativePath(URI, function(result) {
         window.resolveLocalFileSystemURL(result, function(rURI) {
             var options = new FileUploadOptions();
@@ -93,8 +103,11 @@ function uploadf(URI) {
                     document.getElementById("message").innerHTML = JSON.parse(result.response).url;
                     document.getElementById("onlu").style.visibility = 'hidden';
                     document.getElementById("progb").value = "0";
-                    cordova.plugins.clipboard.copy(JSON.parse(result.response).url);
-                    window.isIntent = false;
+                    if (isMultiUpload) {
+                    	window.clipboardmultiu += " " + JSON.parse(result.response).url;
+                    } else {
+                    	cordova.plugins.clipboard.copy(JSON.parse(result.response).url);
+                    }
                     var obj = JSON.parse(localStorage.getItem("history"));
                     obj.push({
                         url: JSON.parse(result.response).url,
@@ -108,13 +121,11 @@ function uploadf(URI) {
                     document.getElementById("message").innerHTML = JSON.parse(result.response).error;
                     document.getElementById("onlu").style.visibility = 'hidden';
                     document.getElementById("progb").value = "0";
-                    window.isIntent = false;
                 }
             }, function(error) {
                 document.getElementById("onlu").style.visibility = 'hidden';
                 document.getElementById("progb").value = "0";
                 console.log(JSON.stringify(error));
-                window.isIntent = false;
             }, options);
             ft.onprogress = function(progressEvent) {
                 if (progressEvent.lengthComputable) {
@@ -133,7 +144,7 @@ function cancelUp() {
 
 function openUp() {
     fileChooser.open(function(uri) {
-        uploadf(uri);
+        uploadf(uri, false, false, false);
     });
 }
 

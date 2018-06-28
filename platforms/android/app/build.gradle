@@ -261,10 +261,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
-    compile "com.google.firebase:firebase-core:11.6.+"
     compile "com.android.support:support-v4:25.+"
     compile "com.android.support:appcompat-v7:25.+"
     compile "com.android.support:support-v4:24.1.1+"
+    compile "com.google.firebase:firebase-core:16.0.+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
@@ -326,4 +326,15 @@ for (def func : cdvPluginPostBuildExtras) {
 //     ext.postBuildExtras = { ... code here ... }
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '26.1.0'
+            }
+        }
+    }
 }

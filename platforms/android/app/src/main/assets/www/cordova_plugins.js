@@ -206,14 +206,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
-    "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
-    "pluginId": "cordova-plugin-firebase-analytics",
-    "merges": [
-      "cordova.plugins.firebase.analytics"
-    ]
-  },
-  {
     "id": "cordova-plugin-filepath.FilePath",
     "file": "plugins/cordova-plugin-filepath/www/FilePath.js",
     "pluginId": "cordova-plugin-filepath",
@@ -260,6 +252,14 @@ module.exports = [
     "clobbers": [
       "CameraPopoverHandle"
     ]
+  },
+  {
+    "id": "cordova-plugin-firebase-analytics.FirebaseAnalytics",
+    "file": "plugins/cordova-plugin-firebase-analytics/www/FirebaseAnalytics.js",
+    "pluginId": "cordova-plugin-firebase-analytics",
+    "merges": [
+      "cordova.plugins.firebase.analytics"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -271,10 +271,11 @@ module.exports.metadata =
   "cordova-plugin-clipboard2": "0.1.0",
   "com.napolitano.cordova.plugin.intent": "0.1.3",
   "cordova-support-google-services": "1.1.0",
-  "cordova-plugin-firebase-analytics": "0.13.0",
   "cordova-plugin-filepath": "1.0.2",
   "com.megster.cordova.FileChooser": "0.0.0",
-  "cordova-plugin-camera": "4.0.3"
+  "cordova-plugin-camera": "4.0.3",
+  "cordova-support-android-plugin": "1.0.1",
+  "cordova-plugin-firebase-analytics": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

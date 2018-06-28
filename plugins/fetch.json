@@ -39,16 +39,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-firebase-analytics": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-firebase-analytics"
-    },
-    "is_top_level": true,
-    "variables": {
-      "FIREBASE_VERSION": "11.6.+"
-    }
-  },
   "cordova-support-google-services": {
     "source": {
       "type": "registry",
@@ -77,6 +67,22 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-camera@4.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-support-android-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-android-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-firebase-analytics": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/MilkGames/cordova-plugin-firebase-analytics.git"
     },
     "is_top_level": true,
     "variables": {}
