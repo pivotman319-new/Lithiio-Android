@@ -22,9 +22,6 @@
     "com.napolitano.cordova.plugin.intent": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
-    "cordova-support-google-services": {
-      "PACKAGE_NAME": "com.milkgames.lithiio"
-    },
     "cordova-plugin-filepath": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
@@ -35,6 +32,9 @@
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
     "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "com.milkgames.lithiio"
+    },
+    "cordova-support-google-services": {
       "PACKAGE_NAME": "com.milkgames.lithiio"
     },
     "cordova-plugin-firebase-analytics": {

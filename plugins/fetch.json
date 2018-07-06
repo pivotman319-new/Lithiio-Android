@@ -39,14 +39,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-support-google-services": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-support-google-services@^1.1.0"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-filepath": {
     "source": {
       "type": "registry",
@@ -82,7 +74,15 @@
   "cordova-plugin-firebase-analytics": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/MilkGames/cordova-plugin-firebase-analytics.git"
+      "id": "https://github.com/lithium720/cordova-plugin-firebase-analytics.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-support-google-services": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-google-services"
     },
     "is_top_level": true,
     "variables": {}

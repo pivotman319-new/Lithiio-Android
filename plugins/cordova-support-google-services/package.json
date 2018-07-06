@@ -1,27 +1,27 @@
 {
-  "_from": "cordova-support-google-services@~1.1.0",
-  "_id": "cordova-support-google-services@1.1.0",
+  "_from": "cordova-support-google-services",
+  "_id": "cordova-support-google-services@1.2.0",
   "_inBundle": false,
-  "_integrity": "sha1-RjTFIgD4cGDReV6yhw6ZRC12Lm0=",
+  "_integrity": "sha512-kzoXkRjAMvx2vEPezXGsrgVISmDpimKTW2pZXtCPBDVk40sstWs++fkKz9OVGy2/+/g4BFL54RqUwFGsV6e1/Q==",
   "_location": "/cordova-support-google-services",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "tag",
     "registry": true,
-    "raw": "cordova-support-google-services@~1.1.0",
+    "raw": "cordova-support-google-services",
     "name": "cordova-support-google-services",
     "escapedName": "cordova-support-google-services",
-    "rawSpec": "~1.1.0",
+    "rawSpec": "",
     "saveSpec": null,
-    "fetchSpec": "~1.1.0"
+    "fetchSpec": "latest"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-support-google-services/-/cordova-support-google-services-1.1.0.tgz",
-  "_shasum": "4634c52200f87060d1795eb2870e99442d762e6d",
-  "_spec": "cordova-support-google-services@~1.1.0",
+  "_resolved": "https://registry.npmjs.org/cordova-support-google-services/-/cordova-support-google-services-1.2.0.tgz",
+  "_shasum": "c96efce64bb9ebeaa589953b170fabfbd4f2cd7f",
+  "_spec": "cordova-support-google-services",
   "_where": "C:\\Users\\Dell XPS\\Documents\\Cordova\\lithiio",
   "author": {
     "name": "Maksim Chemerisuk",
@@ -58,5 +58,5 @@
     "postversion": "git push && git push --tags",
     "version": "replace -s 'version=\"(.+)(?=\">)' 'version=\"'$npm_package_version plugin.xml && git add plugin.xml"
   },
-  "version": "1.1.0"
+  "version": "1.2.0"
 }
