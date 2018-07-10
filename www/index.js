@@ -20,12 +20,17 @@ function onDeviceReady() {
     window.plugins.intent.setNewIntentHandler(function(Intent) {
         if (Intent.clipItems[0].uri) {
         	if (Intent.clipItems.length > 1) {
-        	for (var i = 0; i < Intent.clipItems.length; i++) { 
-            	uploadf(Intent.clipItems[i].uri, true, false, true);
+        	for (var i = 0; i < Intent.clipItems.length; i++) {
+                if (i == Intent.clipItems.length) {
+                    uploadf(Intent.clipItems[i].uri, true, false, true);
+                    cordova.plugins.clipboard.copy(window.clipboardmultiu);
+                    console.log(window.clipboardmultiu);
+                } else {
+                    uploadf(Intent.clipItems[i].uri, true, false, true);
+                    console.log(i);
+                    console.log(window.clipboardmultiu);
+                }
 			}
-			console.error("debug message: " + window.clipboardmultiu);
-			cordova.plugins.clipboard.copy(window.clipboardmultiu);
-			window.clipboardmultiu = "";
         	} else {
         		uploadf(Intent.clipItems[0].uri, true, false, false);
         	}
@@ -39,28 +44,28 @@ function takepicupload() {
     destinationType: Camera.DestinationType.FILE_URI,
     sourceType: Camera.PictureSourceType.CAMERA,
     allowEdit: JSON.parse(localStorage.getItem("allowedit")),
-    encodingType: Camera.EncodingType.JPEG,
-    saveToPhotoAlbum: true,
+    encodingType: Camera.EncodingType.JPEG, // add to settings when?
+    saveToPhotoAlbum: true, // add to settings when?
     correctOrientation: true
   };
   navigator.camera.getPicture(function cameraSuccess(data) {
     uploadf(data, false, true, false);
   }, function cameraError(error) {
-    console.log(error);
+    console.error(error);
   }, options);
 };
 
-if (!navigator.onLine) {
+if (!navigator.onLine) { // now this, is not broken.
 	document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 100%, 50%, 0.2)";
     document.getElementsByClassName("info")[0].innerHTML = "You are offline.";
 };
 
-window.addEventListener("offline", function(event){
+window.addEventListener("offline", function(event){ // this seems to be broken, at least on my phone...
     document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 100%, 50%, 0.2)";
     document.getElementsByClassName("info")[0].innerHTML = "You are offline.";
 });
 
-window.addEventListener("online", function(event){
+window.addEventListener("online", function(event){ // also seems broken
     document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 0%, 100%, 0.2)";
     document.getElementsByClassName("info")[0].innerHTML = "L I T H I I O";
 });
@@ -104,7 +109,9 @@ function uploadf(URI, isIntent, isCamera, isMultiUpload) {
                     document.getElementById("onlu").style.visibility = 'hidden';
                     document.getElementById("progb").value = "0";
                     if (isMultiUpload) {
-                    	window.clipboardmultiu += " " + JSON.parse(result.response).url;
+                    	window.clipboardmultiu += (window.clipboardmultiu.length == 0 ? "" : "\n") + JSON.parse(result.response).url; // if the string is empty, dont add newline, if it isn't, do add a newline! EZ.
+                        cordova.plugins.clipboard.copy(window.clipboardmultiu);
+                        // maybe I could add an optional 'Share' screen once a upload is completed?
                     } else {
                     	cordova.plugins.clipboard.copy(JSON.parse(result.response).url);
                     }
