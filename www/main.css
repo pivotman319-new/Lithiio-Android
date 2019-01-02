@@ -331,7 +331,7 @@ fieldset[disabled] .btn-warning.active {
     color: white;
     text-align: center;
 }
-#logoutb {
+#LOGOUT_BUTTON {
   background: #983836;
   color: white;
   width: 70px;
@@ -340,7 +340,7 @@ fieldset[disabled] .btn-warning.active {
   right: 3px;
   border: 0px solid;
 }
-#settingsb {
+#SETTINGS_BUTTON {
   width: 70px;
   position: absolute;
   top: 5px;

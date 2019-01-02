@@ -43,6 +43,7 @@ captures/
 # Keystore files
 *.jks
 android.keystore
+encrypted.keystore
 
 # Folders we dont need
 node_modules/
