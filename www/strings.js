@@ -1,6 +1,6 @@
 var STRINGS = {
 "en": {
-	"OFFLINE": "You are offline. Uploads might not work.",
+	"OFFLINE": "Offline",
 	"ONLINE": "L I T H I I O", // DO NOT TRANSLATE
 	"CONFIRM_LOGOUT": "Are you SURE you want to logout? This will clear your upload history!",
 	"RESET_ANALYTICS": "This will clear ALL LOCAL Analytics data from your device and reset your app-instance ID!, are you sure?",
@@ -10,11 +10,14 @@ var STRINGS = {
 	"CLEAR_UPLOAD_HISTORY_DONE": "History cleared.",
 	"SETTINGS_BUTTON": "Settings",
 	"LOGOUT_BUTTON": "Logout",
+	"CANCEL_BUTTON": "Cancel",
 	"CAMERA_QUALITY": "Camera quality",
 	"SETTINGS_TITLE": "Settings",
 	"ALLOW_EDIT": "Allow edit (camera)",
+	"ALLOW_EDIT_INFO": "Enabling this will allow you to edit a picture made using the camera before uploading.",
 	"YES": "Yes",
 	"NO": "No",
+	"ENABLE_ANALYTICS": "Enable analytics",
 	"LOCAL_ANALYTICS_DATA": "Local Analytics Data",
 	"RESET_LOCAL_ANALYTICS_BUTTON": "Reset",
 	"REMOTE_ANALYTICS_DATA": "Remote Analytics Data",
@@ -23,11 +26,11 @@ var STRINGS = {
 	"CLEAR_HISTORY_BUTTON": "Clear",
 	"LANGUAGE": "Language",
 	"THEME": "Theme",
-	"DARK_THEME": "Dark"
+	"DARK_THEME": "Dark",
 	"LIGHT_THEME": "Light"
 	},
 "nl": {
-	"OFFLINE": "Je bent offline. Uploads kunnen niet werken.",
+	"OFFLINE": "Offline",
 	"ONLINE": "L I T H I I O", // DO NOT TRANSLATE
 	"CONFIRM_LOGOUT": "Weet je het ZEKER dat je wilt uitloggen? Je upload geschiedenis wordt gewist!",
 	"RESET_ANALYTICS": "Dit zal ALLE LOKALE analytics data van je apparaat wissen en je app-instance ID resetten, weet je het zeker?",
@@ -37,11 +40,14 @@ var STRINGS = {
 	"CLEAR_UPLOAD_HISTORY_DONE": "Geschiedenis gewist.",
 	"SETTINGS_BUTTON": "Instellingen",
 	"LOGOUT_BUTTON": "Uitloggen",
+	"CANCEL_BUTTON": "Annuleren",
 	"CAMERA_QUALITY": "Camera kwaliteit",
 	"SETTINGS_TITLE": "Instellingen",
 	"ALLOW_EDIT": "Bewerken toestaan (camera)",
+	"ALLOW_EDIT_INFO": "Als je dit inschakelt, kun je foto's die je maakt via de camera bewerken voordat ze geüpload worden.",
 	"YES": "Ja",
 	"NO": "Nee",
+	"ENABLE_ANALYTICS": "Analytics inschakelen",
 	"LOCAL_ANALYTICS_DATA": "Lokale Analytics Data",
 	"RESET_LOCAL_ANALYTICS_BUTTON": "Reset",
 	"REMOTE_ANALYTICS_DATA": "Externe Analytics Data",
@@ -50,7 +56,7 @@ var STRINGS = {
 	"CLEAR_HISTORY_BUTTON": "Wissen",
 	"LANGUAGE": "Taal",
 	"THEME": "Thema",
-	"DARK_THEME": "Donker"
+	"DARK_THEME": "Donker",
 	"LIGHT_THEME": "Licht"
 	}
 }
