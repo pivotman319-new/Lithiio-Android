@@ -9,14 +9,37 @@
    </head>
    <body>
       <script type="text/javascript" src="cordova.js"></script>
-      <h3>Settings</h3><br>
-      <table id="stable"><tr><td>Camera quality</td><td id="qualityv"><input type="number" min="1" max="100" onchange="changeQuality()" style="width: 26px; height: 11px;" id="qualityi"></td></tr>
-      <tr><td>Allow edit (camera)</td><td><select id="aeditv" onchange="changeallowEdit()"><option value="true">Yes</option><option value="false">No</option></select></td></tr>
-      <tr><td>Enable analytics</td><td><select id="analyticsv" onchange="changeAnalytics()"><option value="true">Yes</option><option value="false">No</option></select></td></tr>
-      <tr><td>Local Analytics Data</td><td><button type="button" class="btn btn-danger" id="rlanalyticsb" onclick="resetlAnalytics()">Reset</button></td></tr>
-      <tr><td>Remote Analytics Data</td><td><button type="button" class="btn btn-danger" id="rranalyticsb" onclick="requestDataDeletion()">Request Deletion</button></td></tr>
-      <tr><td>History</td><td><button type="button" class="btn btn-danger" id="historyclearb" onclick="clearHistory()">Clear</button></td></tr>
+      <h3 class="i10n" id="SETTINGS_TITLE"></h3>
+      <button type="button" style="display: none;" class="btn btn-success btn-lg">Open account settings</button> <!-- TODO: Remove style & add two <br>. !-->
+      <table id="stable">
+      	<tr><td class="i10n" id="CAMERA_QUALITY"></td>
+      	<td id="qualityv"><input type="number" min="1" max="100" onchange="changeQuality()" style="width: 26px; height: 11px;" id="qualityi">
+      	</td></tr>
+      <tr><td class="i10n" id="ALLOW_EDIT"></td><td><select id="aeditv" onchange="changeallowEdit()">
+      	<option value="true" class="i10n" id="YES"></option>
+      	<option value="false" class="i10n" id="NO"></option>
+  		</select></td></tr>
+      	<tr><td class="i10n" id="ENABLE_ANALYTICS"></td><td><select id="analyticsv" onchange="changeAnalytics()">
+      	<option value="true" class="i10n" id="YES">Yes</option>
+      	<option value="false" class="i10n" id="NO">No</option>
+  		</select></td></tr>
+      	<tr><td class="i10n" id="LOCAL_ANALYTICS_DATA"></td><td>
+      	<button type="button" class="btn btn-danger i10n" id="RESET_LOCAL_ANALYTICS_BUTTON" onclick="resetlAnalytics()"></button>
+      	</td></tr>
+      	<tr><td class="i10n" id="REMOTE_ANALYTICS_DATA"></td><td>
+      	<button type="button" class="btn btn-danger i10n" id="RESET_REMOTE_ANALYTICS_BUTTON" onclick="requestDataDeletion()"></button>
+      	</td></tr>
+      	<tr><td class="i10n" id="HISTORY"></td><td>
+      	<button type="button" class="btn btn-danger i10n" id="CLEAR_HISTORY_BUTTON" onclick="clearHistory()"></button>
+      	</td></tr>
+      	<tr><td class="i10n" id="LANGUAGE"></td><td>
+      	<select id="languagev" onchange="changeLang()">
+      	<option value="en">English</option>
+      	<option value="nl">Nederlands</option>
+  		</select>
+  		</td></tr>
       </table>
       <script src="settings.js"></script>
+      <script type="text/javascript" src="strings.js"></script>
    </body>
 </html>

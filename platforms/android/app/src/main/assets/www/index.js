@@ -1,5 +1,8 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 var clipboardmultiu = "";
+if (!localStorage.getItem("language")) {
+    localStorage.setItem("language", "en");
+};
 function onDeviceReady() {
     if (!localStorage.getItem("apikey")) {
         window.location.replace("setup.html");
@@ -57,17 +60,17 @@ function takepicupload() {
 
 if (!navigator.onLine) { // now this, is not broken.
 	document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 100%, 50%, 0.2)";
-    document.getElementsByClassName("info")[0].innerHTML = "You are offline.";
+    document.getElementsByClassName("info")[0].textContent = STRINGS[lang].OFFLINE;
 };
 
 window.addEventListener("offline", function(event){ // this seems to be broken, at least on my phone...
     document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 100%, 50%, 0.2)";
-    document.getElementsByClassName("info")[0].innerHTML = "You are offline.";
+    document.getElementsByClassName("info")[0].innerHTML = STRINGS[lang].OFFLINE;
 });
 
 window.addEventListener("online", function(event){ // also seems broken
     document.getElementsByClassName("info")[0].style.backgroundColor = "hsla(0, 0%, 100%, 0.2)";
-    document.getElementsByClassName("info")[0].innerHTML = "L I T H I I O";
+    document.getElementsByClassName("info")[0].innerHTML = STRINGS[lang].ONLINE;
 });
 
 function renderHistory() {
@@ -75,7 +78,7 @@ function renderHistory() {
         document.getElementById("table").innerHTML = "";
     }
     var uhistory = JSON.parse(localStorage.getItem("history"));
-    var imgs = ["png", "jpg", "jpeg", "gif"];
+    var imgs = ["png", "jpg", "jpeg", "gif", "webp", "svg"];
     for (var i = 0; i < uhistory.length; i++) {
         if (imgs.includes(uhistory[i].url.split('.').pop())) {
             document.getElementById("table").insertAdjacentHTML("afterbegin", "<tr> <td><div class=imageblock><a href=" + uhistory[i].url + "><img class=thumb src=" + uhistory[i].url + "><div class=type>Picture </a><img class=link src=link.png></div><div class=timestamp datetime=" + uhistory[i].time + "></div></div></td></tr>");
@@ -136,8 +139,7 @@ function uploadf(URI, isIntent, isCamera, isMultiUpload) {
             }, options);
             ft.onprogress = function(progressEvent) {
                 if (progressEvent.lengthComputable) {
-                    var perc = Math.floor(progressEvent.loaded / progressEvent.total * 100);
-                    document.getElementById("progb").value = perc;
+                    document.getElementById("progb").value = Math.floor(progressEvent.loaded / progressEvent.total * 100);
                 }
             };
         })
@@ -156,7 +158,7 @@ function openUp() {
 }
 
 function logout() {
-    if (confirm("Are you SURE you want to logout? This will clear your upload history!")) {
+    if (confirm(STRINGS[lang].CONFIRM_LOGOUT)) {
         localStorage.removeItem("apikey");
         localStorage.removeItem("history");
         window.location.replace("setup.html");

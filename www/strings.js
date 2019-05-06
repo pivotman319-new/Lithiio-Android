@@ -1,5 +1,5 @@
 var STRINGS = {
-"en": {
+	"en": {
 	"OFFLINE": "Offline",
 	"ONLINE": "L I T H I I O", // DO NOT TRANSLATE
 	"CONFIRM_LOGOUT": "Are you SURE you want to logout? This will clear your upload history!",
@@ -28,7 +28,7 @@ var STRINGS = {
 	"THEME": "Theme",
 	"DARK_THEME": "Dark",
 	"LIGHT_THEME": "Light"
-	},
+},
 "nl": {
 	"OFFLINE": "Offline",
 	"ONLINE": "L I T H I I O", // DO NOT TRANSLATE
@@ -58,7 +58,37 @@ var STRINGS = {
 	"THEME": "Thema",
 	"DARK_THEME": "Donker",
 	"LIGHT_THEME": "Licht"
-	}
+},
+"de": {
+	"OFFLINE": "Offline",
+	"ONLINE": "L I T H I I O", // DO NOT TRANSLATE
+	"CONFIRM_LOGOUT": "Sind Sie SICHER, dass Sie sich abmelden möchten? Dadurch wird Ihr Upload-Verlauf gelöscht.",
+	"RESET_ANALYTICS": "Dadurch werden ALLE LOKALEN Analysedaten von Ihrem Gerät gelöscht und Ihre App-Instance-ID wird zurückgesetzt. Sind Sie sicher?",
+	"RESET_ANALYTICS_DONE": "Alle lokalen Analysedaten wurden von Ihrem Gerät gelöscht und Ihre App-Instance-ID wurde zurückgesetzt.",
+	"REQUEST_DATA_DELETION": "Dadurch wird eine Anfrage gestellt, alle Analysedaten über die App und Sie zu löschen. Sind Sie sicher?",
+	"CLEAR_UPLOAD_HISTORY": "Dies wird Ihren Upload-Verlauf löschen. Sind Sie sicher?",
+	"CLEAR_UPLOAD_HISTORY_DONE": "Verlauf gelöscht.",
+	"SETTINGS_BUTTON": "Einstellungen",
+	"LOGOUT_BUTTON": "Abmelden",
+	"CANCEL_BUTTON": "Abbrechen",
+	"CAMERA_QUALITY": "Kameraqualität",
+	"SETTINGS_TITLE": "Einstellungen",
+	"ALLOW_EDIT": "Bearbeiten erlauben (Kamera)",
+	"ALLOW_EDIT_INFO": "Wenn Sie diese Option aktivieren, können Sie Fotos, die Sie mit der Kamera aufgenommen haben, vor dem Hochladen bearbeiten.",
+	"YES": "Ja",
+	"NO": "Nein",
+	"ENABLE_ANALYTICS": "Analytics aktivieren",
+	"LOCAL_ANALYTICS_DATA": "Lokale Analysedaten",
+	"RESET_LOCAL_ANALYTICS_BUTTON": "Zurücksetzen",
+	"REMOTE_ANALYTICS_DATA": "Fernanalysedaten",
+	"RESET_REMOTE_ANALYTICS_BUTTON": "Löschung anfordern",
+	"HISTORY": "Verlauf",
+	"CLEAR_HISTORY_BUTTON": "Löschen",
+	"LANGUAGE": "Sprache",
+	"THEME": "Thema",
+	"DARK_THEME": "Dunkel",
+	"LIGHT_THEME": "Hell"
+}
 }
 
 var lang = localStorage.getItem("language");

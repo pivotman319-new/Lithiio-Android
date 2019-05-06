@@ -1,6 +1,7 @@
 document.getElementById("qualityi").value = localStorage.getItem("quality");
 document.getElementById("aeditv").value = localStorage.getItem("allowedit");
 document.getElementById("analyticsv").value = localStorage.getItem("enableAnalytics");
+document.getElementById("languagev").value = localStorage.getItem("language");
 var xhr = new XMLHttpRequest();
 xhr.addEventListener("readystatechange", function () {
 	if (this.readyState === 4) {
@@ -26,14 +27,14 @@ function changeAnalytics() {
 }
 
 function resetlAnalytics() {
-	if (confirm("This will clear ALL LOCAL Analytics data from your device and reset your app-instance ID!, ARE YOU SURE?")) {
+	if (confirm(STRINGS[lang].RESET_ANALYTICS)) {
 		cordova.plugins.firebase.analytics.resetAnalyticsData();
-		alert("All local Analytics data has been deleted from your device and your app-instance ID has been reset.");
+		alert(STRINGS[lang].RESET_ANALYTICS_DONE);
 	}
 }
 
 function requestDataDeletion() {
-	if (confirm("This will make a request to delete all analytics data about the app and you, are you sure?")) {
+	if (confirm(STRINGS[lang].REQUEST_DATA_DELETION)) {
 		cordova.plugins.firebase.analytics.getAppInstanceId().then(function(value) {
 			xhr.open("GET", "https://us-central1-lithiiomobile.cloudfunctions.net/requestDataDeletion?id=" + value);
 			xhr.send();
@@ -42,8 +43,13 @@ function requestDataDeletion() {
 };
 
 function clearHistory() {
-	if (confirm("This will clear your upload history!")) {
+	if (confirm(STRINGS[lang].CLEAR_UPLOAD_HISTORY)) {
 		localStorage.setItem("history", "");
-		alert("History cleared.");
+		alert(STRINGS[lang].CLEAR_UPLOAD_HISTORY_DONE);
 	}
+}
+
+function changeLang() {
+	localStorage.setItem("language", document.getElementById("languagev").value);
+	window.location.reload()
 }
