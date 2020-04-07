@@ -105,7 +105,7 @@ function uploadf(URI, isIntent, isCamera, isMultiUpload) {
             options.chunkedMode = true;
             ft = new FileTransfer();
             document.getElementById("onlu").style.visibility = 'visible';
-            ft.upload(URI, "https://upload.lithi.io/v1.php", function(result) {
+            ft.upload(URI, "https://lithi.io/api/v2/upload", function(result) {
                 if (JSON.parse(result.response).url) {
                     document.getElementById("message").setAttribute("href", JSON.parse(result.response).url);
                     document.getElementById("message").innerHTML = JSON.parse(result.response).url;
