@@ -4,7 +4,7 @@ if (!localStorage.getItem("language")) {
     localStorage.setItem("language", "en");
 };
 function onDeviceReady() {
-    if (!localStorage.getItem("apikey")) {
+    if (!localStorage.getItem("api_key")) {
         window.location.replace("setup.html");
     };
     if (!localStorage.getItem("history")) {
@@ -100,7 +100,7 @@ function uploadf(URI, isIntent, isCamera, isMultiUpload) {
             options.fileName = rURI.name;
             options.mimeType = rURI.type;
             var params = {};
-            params.key = localStorage.getItem("apikey");
+            params.key = localStorage.getItem("api_key");
             options.params = params;
             options.chunkedMode = true;
             ft = new FileTransfer();
