@@ -6,8 +6,8 @@ var data = new FormData();
 		xhr.addEventListener("readystatechange", function () {
   if (this.readyState === 4) {
     var r = JSON.parse(this.responseText);
-	if (r.apikey) {
-		localStorage.setItem("api_key", r.apikey);
+	if (r.success) {
+		localStorage.setItem("apikey", r.api_key);
 		window.location.replace("index.html");
 	} else {
 		document.getElementById("error").innerHTML = r.error;
